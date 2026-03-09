@@ -1,0 +1,37 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #000; color: #fff; font-family: Helvetica, Arial, sans-serif; height: 100vh; overflow: hidden; }
+#particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+.container { position: relative; max-width: 1200px; margin: 0 auto; padding: 1rem; display: flex; flex-direction: column; height: 100%; pointer-events: none; }
+.container > * { pointer-events: auto; }
+header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #fff; padding-bottom: 0.5rem; }
+h1 { font-size: 1rem; letter-spacing: 2px; }
+.visualizer { height: 200px; border: 1px solid #fff; margin: 1rem 0; position: relative; }
+#viz { width: 100%; height: 100%; }
+#deck-status { position: absolute; bottom: 5px; right: 5px; font-size: 0.6rem; font-weight: bold; }
+.mixer-section { border-top: 1px solid #fff; border-bottom: 1px solid #fff; padding: 1rem 0; margin-bottom: 1rem; }
+.xfade-row { display: flex; align-items: center; justify-content: center; gap: 1rem; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; flex: 1; min-height: 0; }
+.deck { display: flex; flex-direction: column; border: 1px solid transparent; transition: border 0.3s; }
+.deck#deck-a.active { border-color: #ff0000; }
+.deck#deck-b.active { border-color: #0000ff; }
+
+h2 { font-size: 0.7rem; margin-bottom: 0.5rem; letter-spacing: 1px; }
+.tracklist { flex: 1; overflow-y: auto; border: 1px solid #333; margin-bottom: 1rem; }
+.track { padding: 0.5rem; font-size: 0.7rem; border-bottom: 1px solid #222; cursor: pointer; text-transform: uppercase; }
+
+.track:hover, .track.playing { background: #fff; color: #000; }
+
+/* Deck A Selected Style (Red) */
+#listA .track.selected { border: 1px solid #ff0000; font-weight: bold; }
+/* Deck B Selected Style (Blue) */
+#listB .track.selected { border: 1px solid #0000ff; font-weight: bold; }
+
+.fx { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+.ctl { display: flex; flex-direction: column; padding: 4px; border: 1px solid transparent; }
+.ctl.focused { border: 1px solid #fff; }
+.ctl.focused label { color: #fff; text-decoration: underline; }
+label { font-size: 0.5rem; font-weight: bold; margin-bottom: 2px; color: #666; }
+input[type="range"] { -webkit-appearance: none; background: #333; height: 2px; }
+input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 10px; height: 10px; background: #fff; cursor: pointer; }
+button { background: #000; color: #fff; border: 1px solid #fff; padding: 0.4rem 0.8rem; font-size: 0.6rem; cursor: pointer; }
+button:hover { background: #fff; color: #000; }
