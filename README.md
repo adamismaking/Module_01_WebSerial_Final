@@ -1,6 +1,6 @@
-# WebSerial Pro DJ
+# WebSerial DJ
 
-WebSerial Pro DJ is a browser-based DJ application that allows you to mix tracks using WebSerial to connect with external hardware (like an Arduino or ESP32). It features a particle-based visualizer that reacts to the music and FX levels.
+WebSerial DJ is a browser-based application that allows you to mix tracks using WebSerial to connect with external hardware (like an Arduino or ESP32). It features a particle-based visualizer that reacts to the music and FX levels.
 
 ## Features
 
